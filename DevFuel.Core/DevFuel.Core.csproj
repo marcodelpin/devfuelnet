@@ -15,7 +15,8 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,7 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateException.cs" />
-    <Compile Include="Collections\Generic\Tuple.cs" />
+    <Compile Include="Data\Extensions\DataTableExtensions.cs" />
+    <Compile Include="Data\Extensions\TableAdapterExtensions.cs" />
+    <Compile Include="Data\StronglyTyped\DataRowController.cs" />
+    <Compile Include="Data\StronglyTyped\DataRowWrapper.cs" />
+    <Compile Include="Data\StronglyTyped\DataSetController.cs" />
+    <Compile Include="Data\StronglyTyped\DataTableCaptionProvider.cs" />
+    <Compile Include="Data\StronglyTyped\DataTableErrorsException.cs" />
+    <Compile Include="Data\StronglyTyped\Strings.cs" />
+    <Compile Include="Data\StronglyTyped\TableAdapterController.cs" />
     <Compile Include="Data\Xml\XmlDocumentController.cs" />
     <Compile Include="Deployment\ClickOnce.cs" />
     <Compile Include="ComponentModel\AggregateBindingListView.cs">

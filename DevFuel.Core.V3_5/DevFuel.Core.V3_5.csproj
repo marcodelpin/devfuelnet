@@ -51,16 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Extensions\DataTableExtensions.cs" />
-    <Compile Include="Data\Extensions\TableAdapterExtensions.cs" />
-    <Compile Include="Data\StronglyTyped\DataRowController.cs" />
-    <Compile Include="Data\StronglyTyped\DataRowWrapper.cs" />
-    <Compile Include="Data\StronglyTyped\DataSetController.cs" />
-    <Compile Include="Data\StronglyTyped\DataTableCaptionProvider.cs" />
-    <Compile Include="Data\StronglyTyped\DataTableErrorsException.cs" />
-    <Compile Include="Data\StronglyTyped\Strings.cs" />
-    <Compile Include="Data\StronglyTyped\TableAdapterController.cs">
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +62,9 @@
       <Project>{3F1F2811-0B72-4E7A-927B-04ECEDF70830}</Project>
       <Name>DevFuel.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

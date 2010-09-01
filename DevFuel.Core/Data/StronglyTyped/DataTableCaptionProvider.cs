@@ -30,7 +30,6 @@ using System;
 using System.Collections.Generic;
 using System.Resources;
 using System.Data;
-using DevFuel.Core.Collections.Generic;
 namespace DevFuel.Core.Data.StronglyTyped
 {
     /// <summary>
@@ -112,7 +111,7 @@ namespace DevFuel.Core.Data.StronglyTyped
                 DefaultDataTableCaptionProvider p = new DefaultDataTableCaptionProvider();
                 return p.GetCaption(type);
             }
-            return captions.First;
+            return captions.Item1;
         }
 
         /// <summary>
@@ -128,7 +127,7 @@ namespace DevFuel.Core.Data.StronglyTyped
                 DefaultDataTableCaptionProvider p = new DefaultDataTableCaptionProvider();
                 return p.GetCaptionPlural(type);
             }
-            return captions.Second;
+            return captions.Item2;
         }
 
         #endregion
