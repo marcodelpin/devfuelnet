@@ -1,0 +1,233 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F79B7772-6468-4DB5-A7CE-075CD62557ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevFuel.Core.UI</RootNamespace>
+    <AssemblyName>DevFuel.Core.UI</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\DevFuel.Core.UI.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 3.5|AnyCPU' ">
+    <OutputPath>bin\Release 3.5\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing\Design\OpenFileDialogUITypeEditor.cs" />
+    <Compile Include="Drawing\Design\SaveFileDialogUITypeEditor.cs" />
+    <Compile Include="EnableThemingInScope.cs" />
+    <Compile Include="Forms\DoubleBufferedTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\MessagesBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessagesBox.designer.cs">
+      <DependentUpon>MessagesBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\Design\Generic\IUITypeEditable.cs" />
+    <Compile Include="Forms\UITypeEditors\ListModalUITypeEditorFormT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UITypeEditors\ListModalUITypeEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UITypeEditors\ListModalUITypeEditorForm.Designer.cs">
+      <DependentUpon>ListModalUITypeEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\Design\Generic\LookupPropertyUITypeEditor.cs" />
+    <Compile Include="Drawing\Design\Generic\DropDownUITypeEditor.cs" />
+    <Compile Include="Drawing\Design\Generic\ModalUITypeEditor.cs">
+    </Compile>
+    <Compile Include="Drawing\Design\Generic\ListModalUITypeEditor.cs" />
+    <Compile Include="Drawing\Design\UITypeEditorEx.cs" />
+    <Compile Include="Forms\ExceptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExceptionBox.designer.cs">
+      <DependentUpon>ExceptionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UITypeEditors\LookupPropertyDropDownControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UITypeEditors\LookupPropertyDropDownControl.Designer.cs">
+      <DependentUpon>LookupPropertyDropDownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RichTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SecureTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SecureTextBox.designer.cs">
+      <DependentUpon>SecureTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HostApplicationResources.cs" />
+    <Compile Include="Forms\TaskProgressBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskProgressBox.designer.cs">
+      <DependentUpon>TaskProgressBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PropertyGridBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertyGridBox.Designer.cs">
+      <DependentUpon>PropertyGridBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PropertyGridEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\UITypeEditors\ListModalUITypeEditorFormT.resx">
+      <DependentUpon>ListModalUITypeEditorFormT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessagesBox.resx">
+      <DependentUpon>MessagesBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UITypeEditors\ListModalUITypeEditorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ListModalUITypeEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionBox.resx">
+      <DependentUpon>ExceptionBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UITypeEditors\LookupPropertyDropDownControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LookupPropertyDropDownControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskProgressBox.resx">
+      <DependentUpon>TaskProgressBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropertyGridBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PropertyGridBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevFuel.Core\DevFuel.Core.csproj">
+      <Project>{3F1F2811-0B72-4E7A-927B-04ECEDF70830}</Project>
+      <Name>DevFuel.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-properties.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

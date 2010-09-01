@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="4afc3c88-814c-4219-84a5-ca8780ccaafb" Name="DevFuel.NET Application Framework" Language="1033" Version="1.0.0.0" Manufacturer="DevFuel.Core.WiX" UpgradeCode="b06e6aee-34ff-4915-a736-d9b543bdc3dd">
+		<Package InstallerVersion="200" Compressed="yes" />
+
+		<Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+    
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLLOCATION" Name="DevFuel">
+          <Directory Id="COREFOLDER" Name="Core">
+            <Component Id="DevFuelCore" Guid="705ce9bd-0f1c-4dbf-8630-d6f878465ec2">
+              <File Id="DevFuel.Core.dll" Source="../bin/DevFuel.Core.dll"></File>
+              <File Id="DevFuel.Core.Net.dll" Source="../bin/DevFuel.Core.Net.dll"></File>
+              <File Id="DevFuel.Core.UI.dll" Source="../bin/DevFuel.Core.UI.dll"></File>
+            </Component>
+            <Component Id="DevFuelCoreV3_5" Guid="c6a15c5b-33f8-43c5-ac45-3af082ff2f57">
+              <File Id="DevFuel.Core.V3_5.dll" Source="../bin/DevFuel.Core.V3_5.dll"></File>
+            </Component>
+          </Directory>
+          <Directory Id="TASKSFOLDER" Name="NAnt.Tasks" >
+            <Component Id="NantTaskAssemblies" Guid="48e43c14-b40a-42a9-921d-895b72cc6149">
+              <File Id="DevFuel.NAnt.Tasks.dll" Source="../bin/DevFuel.NAnt.Tasks.dll"></File>
+              <File Id="NAnt.Core.dll" Source="../dependencies/NAnt.Core.dll"></File>
+              <File Id="EcmaScript.NET.modified.dll" Source="../dependencies/EcmaScript.NET.modified.dll"></File>
+              <File Id="Yahoo.Yui.Compressor.dll" Source="../dependencies/Yahoo.Yui.Compressor.dll"></File>
+            </Component>
+          </Directory>
+        </Directory>
+			</Directory>
+		</Directory>
+
+		<Feature Id="ProductFeatureV2_0" Title=".NET Framework 2.0 Support" Level="1" ConfigurableDirectory="COREFOLDER">
+			<ComponentRef Id="DevFuelCore" />
+		</Feature>
+    <Feature Id="ProductFeatureV3_5" Title=".NET Framework 3.5 Support" Level="1" ConfigurableDirectory="COREFOLDER">
+      <ComponentRef Id="DevFuelCore" />
+      <ComponentRef Id="DevFuelCoreV3_5" />
+    </Feature>
+    <Feature Id="ProductFeatureNAntTasks" Title="NAnt Tasks" Level="1" ConfigurableDirectory="TASKSFOLDER">
+      <ComponentRef Id="NantTaskAssemblies" />
+    </Feature>
+
+    
+    <Icon Id="devfuel.ico" SourceFile="devfuel.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="devfuel.ico" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" ></Property>
+    <WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+    <WixVariable Id="WixUIBannerBmp" Value="banner.bmp" />
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />   
+    <UIRef Id="WixUI_FeatureTree"/>    
+	</Product>
+</Wix>

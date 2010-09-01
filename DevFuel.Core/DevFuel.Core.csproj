@@ -1,0 +1,110 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F1F2811-0B72-4E7A-927B-04ECEDF70830}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevFuel.Core</RootNamespace>
+    <AssemblyName>DevFuel.Core</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\DevFuel.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release 3.5|AnyCPU' ">
+    <OutputPath>bin\Release 3.5\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AggregateException.cs" />
+    <Compile Include="Collections\Generic\Tuple.cs" />
+    <Compile Include="Data\Xml\XmlDocumentController.cs" />
+    <Compile Include="Deployment\ClickOnce.cs" />
+    <Compile Include="ComponentModel\AggregateBindingListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentModel\BindingListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentModel\CompositeItemFilter.cs" />
+    <Compile Include="ComponentModel\ExpandablePropertyGridCollection.cs" />
+    <Compile Include="ComponentModel\IItemFilter.cs" />
+    <Compile Include="ComponentModel\INotifyingEditableObject.cs" />
+    <Compile Include="ComponentModel\InvalidSourceListException.cs" />
+    <Compile Include="ComponentModel\LookupProperty.cs" />
+    <Compile Include="ComponentModel\MultiSourceIndexList.cs" />
+    <Compile Include="ComponentModel\ObjectView.cs" />
+    <Compile Include="ComponentModel\ProvidedViewPropertyDescriptor.cs" />
+    <Compile Include="ComponentModel\Strings.cs" />
+    <Compile Include="Documentation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\CredUI.cs" />
+    <Compile Include="Security\Cryptography\HashTransform.cs" />
+    <Compile Include="Security\Cryptography\SymmetricTransform.cs" />
+    <Compile Include="Threading\Task.cs" />
+    <Compile Include="UI\IInvokable.cs" />
+    <Compile Include="UI\IProgressObserver.cs" />
+    <Compile Include="VersionPattern.cs" />
+    <Compile Include="WindowsMessages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
